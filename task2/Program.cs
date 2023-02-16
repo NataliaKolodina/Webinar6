@@ -22,23 +22,13 @@ int InputNumber(string message)
 
 void CheckTriangle(int number1, int number2, int number3)
 {
-    if (number1 < (number2 + number3))
+    if (
+        (number1 < (number2 + number3))
+        && (number2 < (number1 + number3))
+        && (number3 < (number2 + number1))
+    )
     {
-        if (number2 < (number1 + number3))
-        {
-            if (number3 < (number2 + number1))
-            {
-                Console.Write("является трегольником");
-            }
-            else
-            {
-                Console.Write("не является трегольником");
-            }
-        }
-        else
-        {
-            Console.Write("не является трегольником");
-        }
+        Console.Write("является трегольником");
     }
     else
     {
